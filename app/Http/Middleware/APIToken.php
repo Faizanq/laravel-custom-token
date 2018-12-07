@@ -22,6 +22,6 @@ class APIToken
            $response['error'][] = 'Unauthorized';  
            $response['data'] = [];  
            $response['success'] = 0; 
-           return response()->json($response, $code);
+           return response()->json($response, $code=401);
     }
 }
