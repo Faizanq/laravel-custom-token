@@ -18,3 +18,10 @@ use Illuminate\Http\Request;
 * Token
 */
 Route::get('/get-token','API\Token\TokenController@index');
+
+
+
+Route::middleware('APIToken')->group(function () {
+
+    Route::post('/login','API\Auth\AuthController@login');
+});
